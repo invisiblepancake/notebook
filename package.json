@@ -31,6 +31,7 @@
     "eslint": "eslint . --ext .ts,.tsx --fix",
     "eslint:check": "eslint . --ext .ts,.tsx",
     "eslint:files": "eslint --fix",
+    "get:lab:version": "node ./buildutils/lib/get-latest-lab-version.js",
     "integrity": "node buildutils/lib/ensure-repo.js",
     "prettier": "prettier --write \"**/*{.ts,.tsx,.js,.jsx,.css,.json,.md}\"",
     "prettier:check": "prettier --list-different \"**/*{.ts,.tsx,.js,.jsx,.css,.json,.md}\"",
@@ -39,6 +40,7 @@
     "release:patch": "node ./buildutils/lib/release-patch.js",
     "test": "lerna run test",
     "update:dependency": "node ./node_modules/@jupyterlab/buildutils/lib/update-dependency.js --lerna",
+    "upgrade:lab:dependencies": "node ./buildutils/lib/upgrade-lab-dependencies.js",
     "watch": "run-p watch:lib watch:app",
     "watch:app": "lerna exec --stream --scope \"@jupyter-notebook/app\" jlpm watch",
     "watch:lib": "lerna exec --stream --scope @jupyter-notebook/metapackage jlpm watch"
@@ -49,7 +51,7 @@
     "yjs": "^13.5.40"
   },
   "devDependencies": {
-    "@jupyterlab/buildutils": "~4.3.1",
+    "@jupyterlab/buildutils": "~4.4.0-alpha.1",
     "@typescript-eslint/eslint-plugin": "^5.55.0",
     "@typescript-eslint/parser": "^5.55.0",
     "eslint": "^8.36.0",
